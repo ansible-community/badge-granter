@@ -1,0 +1,9 @@
+USER_AGENT = "BadgeGranter/0.1 (+https://forum.ansible.com/)"
+
+# Target and auth stuff
+BADGE_ID = 110 # get from Discourse
+DISCOURSE = "https://myforum.com"
+DISCOURSE_API_USER = "myuser"
+DISCOURSE_API_KEY = "myapikey"
+SSO_SECRET = "my_sso_secret"
+RETURN_URL = "https://url_to_this_app.example.com"
