@@ -1,0 +1,6 @@
+.Rhistory
+.Rproj.user/
+.venv/
+__pycache__/
+badge-granter.Rproj
+config.toml
