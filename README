@@ -1,0 +1,38 @@
+This project can be used to grant Discourse badges via QRcode scanning or any other URL-providing system
+
+# Project setup
+
+- Create a venv and source it
+- `pip install -r requirements.txt`
+- `cp config.toml.sample config.toml`
+- Edit config to your needs (see below)
+- `flask run`
+
+# Hosting
+
+You'll need somewhere to run this app that your users can reach, so that you
+can provide the URL to them. You'll also need to use this URL in the Discourse
+config (see below).
+
+# Discourse-side setup
+
+You'll need to generate a secret (I used `pwgen 16 -1`). Head to your Admin >
+Settings page and search for `discourse connect provider secrets`. Add a new
+host/secret pair using the URL of this webapp and the generated secret.
+
+You'll need an API key (Admin > API > New Key) with the "assign badge to user" scope.
+
+You'll also need to create a badge (Badges > New) and make a note of the badge
+ID in the address bar (it's numeric)
+
+# Config file
+
+Using the secrets, keys, etc, you should be able to fill out the config file.
+
+# License
+
+GPLv3+
+
+# Contributing
+
+Please open Issues and PRs as you need, I'll do my best to review them!
