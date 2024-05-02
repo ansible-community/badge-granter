@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+<style>
+.qrcode {
+  column-count: 3;
+
+h1 {
+  text-align: center;
+}
+</style>
+
+{% block content %}
+    <h1>{{ name }}</h1>
+    <div class="qrcode">
+        <img src="{{ qr }}" width=300 height=300>
+        <img src="{{ img_cdn }}" widht=300 height=300>
+    </div>
+    <h2>{% block title %} Scan the QR code to claim your badge! {% endblock %}</h2>
+{% endblock %}

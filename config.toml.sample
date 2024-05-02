@@ -1,9 +1,16 @@
 USER_AGENT = "BadgeGranter/0.1 (+https://forum.ansible.com/)"
 
 # Target and auth stuff
-BADGE_ID = 110 # get from Discourse
 DISCOURSE = "https://myforum.com"
 DISCOURSE_API_USER = "myuser"
 DISCOURSE_API_KEY = "myapikey"
 SSO_SECRET = "my_sso_secret"
 RETURN_URL = "https://url_to_this_app.example.com"
+
+# Add one block per badge
+
+[badges.1234567890abcde] # generate a UUID here
+name     = "A badge is you!"
+badge_id = 1
+img_cdn  = "https://path/to/your/badge/art.svg"
+redirect = "/badges/1/a-badge-is-you"

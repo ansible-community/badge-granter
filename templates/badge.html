@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<img src="{{ img_cdn }}" widht=300 height=300>
+<h3>{% block title %} Claim the "{{ name }}" badge on the Ansible Forum{% endblock %}</h3>
+    <form method="post">
+	    <button type="submit">Claim the {{ name }} Badge!</button>
+    </form>
+{% endblock %}
+

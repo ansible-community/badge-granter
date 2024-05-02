@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8"
+          name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0" />
     <title>{% block title %} {% endblock %} - FlaskApp</title>
     <style>
         .message {
@@ -11,7 +14,7 @@
         }
         nav a {
             color: #d64161;
-            font-size: 3em;
+            font-size: 1em;
             margin-left: 50px;
             text-decoration: none;
         }
@@ -21,13 +24,18 @@
             margin: 5px;
             color: #970020;
             background-color: #ffd5de;
-        }
+	}
+	
+        h3 {
+            inline-size: 300px;
+            overflow-wrap: break-word;
+	}
 
     </style>
 </head>
 <body>
     <nav>
-        <a href="{{ url_for('index') }}">Ansible Badge Granter 0.1</a>
+        <a href="{{ url_for('index') }}">Ansible Badge Granter</a>
         <a href="https://github.com/ansible-community/badge-granter">About</a>
     </nav>
     <hr>
