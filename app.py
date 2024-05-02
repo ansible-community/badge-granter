@@ -20,6 +20,13 @@ app.config.update(
              'User-Agent': app.config['USER_AGENT']}
 )
 
+# This block is only needed if running behind a reverse proxy (i.e. when in production)
+# Comment it out for dev work
+from werkzeug.middleware.proxy_fix import ProxyFix
+app.wsgi_app = ProxyFix(
+  app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+)
+
 # Routes
 
 @app.route("/", methods=['GET', 'POST'])
