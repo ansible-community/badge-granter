@@ -1,5 +1,3 @@
-# app.py
-
 import tomllib
 import base64
 import hmac
@@ -138,3 +136,7 @@ def award_discourse_badge(badge_id, user):
     
     print(f"Error granting badge: got {r.status_code}")
     return(False)
+
+# Run the app
+if __name__ == "__main__":
+        app.run(host='0.0.0.0')
