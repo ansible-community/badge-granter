@@ -1,0 +1,15 @@
+# Copy this to /etc/systemd/system and edit as needed
+[Unit]
+Description=uWSGI instance to serve badge-granter
+After=network.target
+
+[Service]
+User=myuser
+Group=nginx
+WorkingDirectory=/path/to/badge-granter
+Environment="PATH=/path/to/badge-granter/.venv/bin"
+ExecStart=/path/to/badge-granter/.venv/bin/uwsgi --ini app.ini
+
+[Install]
+WantedBy=multi-user.target
+
